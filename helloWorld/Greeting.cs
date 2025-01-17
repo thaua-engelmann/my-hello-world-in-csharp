@@ -13,6 +13,9 @@
 
             if (isUserInfosInvalid(name, message))
             {
+                Console.WriteLine("Both name and message are required. Press any key to try again");
+                Console.ReadLine();
+
                 askUserForNameAndMessage();
             } else
             {
@@ -24,7 +27,7 @@
 
         private static void showGreeting(string name, string message)
         {
-            Console.WriteLine($"Hello, your name is {name} and your message is: \n{message}");
+            Console.WriteLine($"Your name is {name} and your message is: \n{message}");
         }
     }
 }
