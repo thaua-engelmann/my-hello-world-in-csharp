@@ -10,6 +10,8 @@
 
             if (!string.IsNullOrWhiteSpace(word))
             {
+                word = word.Trim();
+
                 // Check if user has entered a phrase.
                 // We can check it splitting the string word by a "space" caracter,
                 // indicating two or more words. 
