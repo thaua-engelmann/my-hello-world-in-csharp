@@ -17,12 +17,14 @@
             //FullName.AskUserNameAndLastName();
 
             // Third - In this one, let's get to play a bit with math. I'll be doing some basic operations with two double numbers.
-            MathOperations myMath = new(10.6, 2.2);
-            myMath.Add();
-            myMath.Subtract();
-            myMath.Multiply();
-            myMath.Divide();
-            myMath.Mean();
+            //MathOperations myMath = new(10.6, 2.2);
+            //myMath.Add();
+            //myMath.Subtract();
+            //myMath.Multiply();
+            //myMath.Divide();
+            //myMath.Mean();
+
+            CountCaracters.AskForWord();
         }
     };
 
