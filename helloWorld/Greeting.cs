@@ -19,11 +19,11 @@
                 askUserForNameAndMessage();
             } else
             {
-                showGreeting(name, message);
+                showGreeting(name!, message!);
             }
         }
 
-        private static bool isUserInfosInvalid(string name, string message) => string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(message);
+        private static bool isUserInfosInvalid(string? name, string? message) => string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(message);
 
         private static void showGreeting(string name, string message)
         {
