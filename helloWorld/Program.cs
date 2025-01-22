@@ -11,7 +11,11 @@
 
             // First - Personalized Greeting Exercice. It takes up two inputs from user, a name and a message.
             // We'll be concatenating both into one string, but also making it recursive once validation goes wrong. 
-            Greeting.askUserForNameAndMessage();          
+            Greeting.askUserForNameAndMessage();
+
+            // Second - Ask user first name and last name and show it concatenated into a string. Let's try to keep this one a bit simpler, without any further validation or recursivity.
+            FullName.AskUserNameAndLastName();
+
         }
     };
 
