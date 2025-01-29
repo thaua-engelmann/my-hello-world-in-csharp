@@ -24,7 +24,9 @@
             //myMath.Divide();
             //myMath.Mean();
 
-            CountCaracters.AskForWord();
+            //CountCaracters.AskForWord();
+
+            CarPlateValidation.checkPlateIsValid();
         }
     };
 
