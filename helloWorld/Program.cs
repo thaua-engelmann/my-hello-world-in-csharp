@@ -26,7 +26,7 @@
 
             //CountCaracters.AskForWord();
 
-            CarPlateValidation.checkPlateIsValid();
+            CarPlateValidation.CheckPlateIsValid();
         }
     };
 

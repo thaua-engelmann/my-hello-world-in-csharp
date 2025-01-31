@@ -3,38 +3,56 @@
     public class CarPlateValidation
     {
 
-        public static void checkPlateIsValid()
+        public static void CheckPlateIsValid()
         {
             Console.WriteLine("Enter a plate: ");
             string? plate = Console.ReadLine();
 
-            if (!string.IsNullOrWhiteSpace(plate))
+            // Plate must not be longer than 7 caracters.
+            // First 3 caracters of the plate must be a char.
+            // The remaining 4 caracters must be an int.
+
+            if (!string.IsNullOrWhiteSpace(plate) && plate.Count() == 7)
             {
 
                 List<char> letters = new List<char>();
                 List<int> numbers = new List<int>();
 
-                foreach (char c in plate)
+                for (int i = 0; i < plate.Length; i++)
                 {
 
-                    if (IsCharDigit(c))
+                    char singleChar = plate[i];
+                    var lettersRange = 3;
+
+                    if (i < lettersRange)
                     {
-                        numbers.Add(c - '0');
+
+                        if (!char.IsLetter(singleChar))
+                        {
+                            Console.WriteLine("First 3 caracters must be a letter.");
+                            return;
+                        }
+
+                        letters.Add(singleChar);
                     } else
                     {
-                        letters.Add(c);
+
+                        if (!char.IsDigit(singleChar))
+                        {
+                            Console.WriteLine("Last 4 caracters must be an integer.");
+                            return;
+                        }
+
+                        numbers.Add(singleChar - '0');
                     }
                 }
 
-                Console.WriteLine($"letters: {string.Join(", ", letters)}");
-                Console.WriteLine($"numbers: {string.Join(", ", numbers)}");
+                Console.WriteLine($"Plate {plate} is valid.");
+
+            } else
+            {
+                Console.WriteLine("Plate must have exactly 7 caracters.");
             }
         }
-
-        private static bool IsCharDigit(char value)
-        {
-            return char.IsDigit(value);
-        }
-
     }
 }
