@@ -25,8 +25,9 @@
             //myMath.Mean();
 
             //CountCaracters.AskForWord();
+            //CarPlateValidation.CheckPlateIsValid();
 
-            CarPlateValidation.CheckPlateIsValid();
+            DateInDifferentFormats.AskUserSomeDate();
         }
     };
 
